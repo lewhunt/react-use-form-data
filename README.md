@@ -6,9 +6,18 @@ Currently it's configured to handle the following input field types: number, tex
 It can be useful when prototyping, for example when using a simple editor to control sub-component props.
 
 ## Install
-TODO
+### npm package (recommended)
+```bash
+npm i react-use-form-data
+```
+
+### CDN script (for prototyping only)
+```js
+<script type="text/javascript" src="https://unpkg.com/react-use-form-data/umd/react-use-form-data.js"></script>
+```
 
 ## Usage
+### Node.js development setup (recommended)
 1. Import the installed Hook
 2. Call the Hook with initial form data as key name-value pairs
 3. Configure your form fields to read in formData and update via events to updateFormData()
@@ -49,6 +58,9 @@ export default function Demo() {
     )
 }
 ```
+
+### via browser script (for prototyping only)
+see sample file demo/umd-example.html
 
 ## Optional parameter to use initial data in placeholders
 The demo shows how calling useFormData with a second parameter (set to true) then returns isInitialDataForPlaceholder. 
