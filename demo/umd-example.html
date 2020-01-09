@@ -1,0 +1,69 @@
+<!-- example of in-browser UMD script usage -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>react-use-form-data 1.0.0 Demo</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="react-use-form-data.min.js"></script><!-- TODO - update url -->
+    <script type="text/babel">
+    
+      function Demo() {
+
+        const [formData, updateFormData, initialFormData, isInitialDataForPlaceholder] = useFormData({ 
+          numberField: 101,
+          textField: 'hello world',
+          buttonField: false,
+          checkboxField: true
+        }, true);
+
+        return (
+          <div>
+            <h1>react-use-form-data Custom Hook</h1>
+            <p>This custom React Hook lets you easily populate and update form input data within function components via local state.</p> 
+            <p>It can be useful when prototyping, for example when using a simple editor to control sub-component props.</p> 
+            <h2>Demo</h2>
+            <div>
+              <label>number :&nbsp; 
+                <input type='number' 
+                  value={formData.numberField} 
+                  onChange={(evt) => updateFormData('numberField', evt)} 
+                  data-testid='numberField' /></label>
+              <br/><br/>
+              <label>text :&nbsp;
+                <input type='text' 
+                  value={formData.textField} 
+                  onChange={(evt) => updateFormData('textField', evt)} 
+                  placeholder={isInitialDataForPlaceholder && initialFormData.textField} 
+                  data-testid='textField' /></label>
+              <br/><br/>
+              <label>button :&nbsp;
+                <input type='button'
+                  value='toggle'
+                  style={{ outline:0, background: formData.buttonField ? 'silver' : 'white'}}
+                  onClick={(evt) => updateFormData('buttonField', evt)} 
+                  data-testid='buttonField'/></label>
+              <br/><br/>
+              <label>checkbox :&nbsp; 
+                <input type='checkbox' 
+                  checked={formData.checkboxField} 
+                  onChange={(evt) => updateFormData('checkboxField', evt)} 
+                  data-testid='checkboxField'/></label>
+              <br/>
+            </div>
+            <p>{JSON.stringify(formData)}</p>
+          </div>
+        )
+      }
+    
+      ReactDOM.render(<Demo/>, document.getElementById('app'))
+    </script>
+</body>
+</html>

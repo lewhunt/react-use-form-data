@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      react-use-form-data Custom Hook
+    </h1>
+    <p>
+      This custom React Hook lets you easily populate and update form input data within function components via local state.
+    </p>
+    <p>
+      It can be useful when prototyping, for example when using a simple editor to control sub-component props.
+    </p>
+    <h2>
+      Demo
+    </h2>
+    <div>
+      <label>
+        number : 
+        <input
+          data-testid="numberField"
+          type="number"
+          value="101"
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        text : 
+        <input
+          data-testid="textField"
+          placeholder="hello world"
+          type="text"
+          value="hello world"
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        button : 
+        <input
+          data-testid="buttonField"
+          style="outline: 0; background: white;"
+          type="button"
+          value="toggle"
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        checkbox : 
+        <input
+          checked=""
+          data-testid="checkboxField"
+          type="checkbox"
+        />
+      </label>
+      <br />
+    </div>
+    <p>
+      {"numberField":101,"textField":"hello world","buttonField":false,"checkboxField":true}
+    </p>
+    <h2>
+      Usage
+    </h2>
+    <ol>
+      <li>
+        Import the installed Hook
+      </li>
+      <li>
+        Call the Hook with initial form data as key name-value pairs
+      </li>
+      <li>
+        Configure your form fields to read in formData and update via events to updateFormData()
+      </li>
+    </ol>
+    <h3>
+      Sample
+    </h3>
+    <pre>
+      <code>
+        //1. IMPORT THE INSTALLED HOOK  
+import React from 'react'    
+import useFormData from 'react-use-form-data'
+
+export default function Demo() {
+
+    // 2. CALL THE HOOK WITH INITIAL DATA AS NAME-VALUE PAIRS
+    const [formData, updateFormData] = useFormData({ 
+        numberField: 101,
+        textField: 'hello world',
+        checkboxField: true
+    });
+ 
+    // 3. CONFIGURE YOUR FORM FIELDS TO READ IN formData AND UPDATE VIA EVENTS TO updateFormData()
+    return (
+        &lt;div&gt;
+            &lt;input type='number' 
+                value={formData.numberField} 
+                onChange={(evt) =&gt; updateFormData('numberField', evt)}
+                data-testid='numberField' /&gt;
+
+            &lt;input type='text' 
+                value={formData.textField} 
+                onChange={(evt) =&gt; updateFormData('textField', evt)}
+                data-testid='textField' /&gt;
+
+            &lt;input type='checkbox' 
+                checked={formData.checkboxField} 
+                onChange={(evt) =&gt; updateFormData('checkboxField', evt)}
+                data-testid='checkboxField'/&gt;
+        &lt;/div&gt;
+    )
+}
+      </code>
+    </pre>
+  </div>
+</div>
+`;
