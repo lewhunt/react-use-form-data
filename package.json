@@ -1,6 +1,6 @@
 {
   "name": "react-use-form-data",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This custom React Hook lets you easily populate and update form input data state within functional components.",
   "main": "lib/index.js",
   "module": "es/index.js",
