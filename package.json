@@ -1,6 +1,6 @@
 {
   "name": "react-use-form-data",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This custom React Hook lets you easily populate and update form input data state within functional components.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -38,7 +38,7 @@
     "react-dom": "^16.12.0"
   },
   "author": "Lewis Hunt",
-  "homepage": "https://github.com/lewhunt/react-use-form-data",
+  "homepage": "https://github.com/lewhunt/react-use-form-data#readme",
   "license": "MIT",
   "repository": "https://github.com/lewhunt/react-use-form-data.git",
   "keywords": [
