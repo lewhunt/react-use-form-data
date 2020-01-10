@@ -64,31 +64,5 @@ export default function Demo() {
 ### Usage via browser script (for prototyping only)
 See sample file in [demo/umd-example.html](https://github.com/lewhunt/react-use-form-data/blob/master/demo/umd-example.html)
 
-## Optional parameter to use initial data in placeholders
-The demo shows how calling useFormData with a second parameter (set to true) then returns isInitialDataForPlaceholder. 
-
-Input field placeholder values can then be populated with initialFormData if so desired.
-
-```js
-  const [formData, updateFormData, initialFormData, isInitialDataForPlaceholder] = useFormData({
-      numberField: 101,
-      textField: 'hello world',
-      checkboxField: true
-      },
-      // an optional true parameter returns isInitialDataForPlaceholder
-      true );
-
-    return (
-        <input type='text' 
-            value={formData.textField} 
-            onChange={(evt) => updateFormData('textField', evt)} 
-            placeholder={isInitialDataForPlaceholder && initialFormData.textField} 
-            data-testid='textField' />
-  )
-```
-
-## Examples in use
-TODO
-
 ## License
 MIT © [Lewis Hunt](https://github.com/lewhunt)
