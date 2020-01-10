@@ -1,14 +1,14 @@
 # React-Use-Form-Data Custom Hook
 This custom React Hook lets you easily populate and update form input data within functional components.
 
-Currently it's configured to handle the following input field types: number, text, button and checkbox.
-
-It can be useful for prototyping and form editors that need to control sub-component props. The demo used in [React Video Looper](https://github.com/lewhunt/react-video-looper) uses this hook to manage the form data state, passing props down to the video component.
-
 **Example of use with an editor**
 ![Example](readme-assets/react-use-form-data-example.gif)
 
 [Basic Demo](https://lewhunt.github.io/react-use-form-data/)
+
+It can be useful for prototyping with form editors that need to control sub-component props. The demo used in [React Video Looper](https://github.com/lewhunt/react-video-looper) uses this hook to manage the form data state, passing props down to the video component.
+
+Currently it's configured to handle the following input field types: number, text, button and checkbox.
 
 ## Install
 ### npm package (recommended)
