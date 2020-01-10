@@ -16,7 +16,7 @@ export default function Demo() {
   return (
     <div>
       <h1>react-use-form-data Custom Hook</h1>
-      <p>This custom React Hook lets you easily populate and update form input data within function components via local state.</p> 
+      <p>This custom React Hook lets you easily populate and update form input data state within functional components.</p> 
       <p>It can be useful when prototyping, for example when using a simple editor to control sub-component props.</p> 
       <h2>Demo</h2>
       <div>

@@ -1,9 +1,12 @@
 # React-Use-Form-Data Custom Hook
-This custom React Hook lets you easily populate and update form input data within function components via local state.
+This custom React Hook lets you easily populate and update form input data state within functional components.
 
 Currently it's configured to handle the following input field types: number, text, button and checkbox.
 
-It can be useful when prototyping, for example when using a simple editor to control sub-component props.
+It can be useful when prototyping, for example here when using a simple editor to control sub-component props:
+
+#### Example of use as an editor
+![Example](readme-assets/react-use-form-data-example.gif)
 
 [Basic Demo](https://lewhunt.github.io/react-use-form-data/)
 
