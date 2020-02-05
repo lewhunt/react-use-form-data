@@ -2,7 +2,7 @@
 This custom React Hook lets you easily populate and update form input data within functional components.
 
 **Example of use with an editor**
-![Example](readme-assets/react-use-form-data-example.gif)
+![Example](https://github.com/lewhunt/assets/raw/master/readme/react-use-form-data-example.gif)
 
 [Basic Demo](https://lewhunt.github.io/react-use-form-data/)
 
